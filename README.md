@@ -1,5 +1,5 @@
 # OscFFTSender
-This is a spin-off software from NOSLib (nosvisuals.com).
+This is a spin-off software of the sound analysis part from NOSLib (nosvisuals.com).
 
 # Features
 - Slider for gain
