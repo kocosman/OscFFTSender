@@ -9,6 +9,6 @@ This is a spin-off software of the sound analysis part from NOSLib (nosvisuals.c
   - through config file, or textfields become visible when you click on the ip and port number
 
 
-# Dependent Libraries:
+# Dependent Libraries
 - ControlP5
 - OscP5
