@@ -12,5 +12,3 @@ This is a spin-off software from NOSLib (nosvisuals.com).
 # Dependent Libraries:
 - ControlP5
 - OscP5
-
-# Written in Processing
