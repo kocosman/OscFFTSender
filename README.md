@@ -1,4 +1,4 @@
-# soundAnalyzerOSC
+# OscFFTSender
 This is a spin-off software from NOSLib (nosvisuals.com).
 
 # Features
