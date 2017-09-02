@@ -5,10 +5,6 @@ Rectangle soundWavePanel;
 float soundFocusSize;
 float soundFocusOffset;
 
-public float borderMarginBig = 68;
-public float borderMarginSmall = 44;
-public float borderLinesThickness = 8;
-
 
 void settings() {
   size(1000, 500);
