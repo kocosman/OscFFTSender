@@ -1,11 +1,11 @@
 [
   {
-    "soundFocusSize": 498,
-    "soundFocusOffset": 1098
+    "soundFocusSize": 402,
+    "soundFocusOffset": 87
   },
   {
     "remoteIP": "127.0.0.1",
     "incomingPort": 2345,
-    "outgoingPort": 7001
+    "outgoingPort": 6666
   }
 ]
