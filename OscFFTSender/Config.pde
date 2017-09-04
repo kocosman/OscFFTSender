@@ -1,9 +1,11 @@
+public static final String CONFIG_FILE = "data/config.json";
+
 public void loadConfigFile() {
   JSONObject config;
   try {
-    config = loadJSONObject("data/config.json");
+    config = loadJSONObject(CONFIG_FILE);
   } catch(NullPointerException e) {
-    println("Couldn't find Config file");
+    println("Couldn't find config file " + CONFIG_FILE);
     return;
   }
 
@@ -31,6 +33,6 @@ public void saveConfigFile() {
   oscParams.setInt("outgoingPort", outgoingPort);
   config.setJSONObject("osc", oscParams);
 
-  println("SAVING CONFIG FILE");
-  saveJSONObject(config, "data/config.json");
+  println("SAVING CONFIG FILE " + CONFIG_FILE);
+  saveJSONObject(config, CONFIG_FILE);
 }
