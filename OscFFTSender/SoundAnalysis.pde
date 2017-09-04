@@ -57,13 +57,13 @@ public class SoundAnalyzer {
   public SoundAnalyzer(PApplet papplet, int spectrumSize) {
     this.papplet = papplet;
     this.spectrumSize = spectrumSize;
-    papplet.println("SoundAnalyzer loaded");
+    PApplet.println("SoundAnalyzer loaded");
 
     try{
       minim = new Minim(papplet);
       in = minim.getLineIn(1,spectrumSize*2,sampleRate);
     } catch(Exception e){
-      papplet.println("MIC UNAVAILABLE");
+      PApplet.println("MIC UNAVAILABLE");
     }
     
     fftLin = new FFT(in.bufferSize(), in.sampleRate());
@@ -140,7 +140,7 @@ public class SoundAnalyzer {
   public void drawFFTRaw(int x_, int y_, int w_, int h_){
     float fftDrawThickness = (float)w_/(float)soundSpectrum.length;
     for(int i = 0; i < soundSpectrum.length; i++){
-      float freqVal = papplet.constrain(soundSpectrum[i],0,h_/2);
+      float freqVal = PApplet.constrain(soundSpectrum[i],0,h_/2);
       papplet.rect(
         x_+(i*fftDrawThickness),
         y_+((h_/2)-freqVal),
@@ -153,7 +153,7 @@ public class SoundAnalyzer {
   public void drawFFTSmooth(int x_, int y_, int w_, int h_){
     float fftDrawThickness = (float)w_/(float)soundSpectrumLPF.length;
     for(int i = 0; i < soundSpectrumLPF.length; i++){
-      float freqVal = papplet.constrain(soundSpectrumLPF[i],0,h_/2);
+      float freqVal = PApplet.constrain(soundSpectrumLPF[i],0,h_/2);
       papplet.rect(
         x_+(i*fftDrawThickness),
         y_+((h_/2)-freqVal),
@@ -172,13 +172,13 @@ public class SoundAnalyzer {
   }
 
   public void constrainSoundFocus(){
-    soundFocusSize = papplet.constrain(soundFocusSize,4,spectrumSize);
-    soundFocusOffset = papplet.constrain(soundFocusOffset,0,spectrumSize-soundFocusSize);
+    soundFocusSize = PApplet.constrain(soundFocusSize,4,spectrumSize);
+    soundFocusOffset = PApplet.constrain(soundFocusOffset,0,spectrumSize-soundFocusSize);
   }
 
   public void drawSoundFocus(int x_, int y_, int w_, int h_){
-    float mappedOffset = papplet.map(soundFocusOffset,0,spectrumSize,0,w_);
-    float mappedSize = papplet.map(soundFocusSize,0,spectrumSize,0,w_);
+    float mappedOffset = PApplet.map(soundFocusOffset,0,spectrumSize,0,w_);
+    float mappedSize = PApplet.map(soundFocusSize,0,spectrumSize,0,w_);
 
     Rectangle rSelf = new Rectangle(x_+(int)mappedOffset-(int)mappedSize/2,y_,(int)mappedSize,h_);
 

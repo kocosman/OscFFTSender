@@ -1,11 +1,11 @@
-[
-  {
+{
+  "sound": {
     "soundFocusSize": 402,
     "soundFocusOffset": 87
   },
-  {
+  "osc": {
     "remoteIP": "127.0.0.1",
     "incomingPort": 2345,
     "outgoingPort": 6666
   }
-]
+}
