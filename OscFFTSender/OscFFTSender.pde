@@ -49,25 +49,28 @@ void draw() {
 
 void mousePressed() {
   println(mouseX + " - " + mouseY);
-  Rectangle incomingPortRect = new Rectangle((int)cp5.get(Textfield.class, "incomingPortText").getPosition()[0], (int)cp5.get(Textfield.class, "incomingPortText").getPosition()[1], (int)cp5.get(Textfield.class, "incomingPortText").getWidth(), (int)cp5.get(Textfield.class, "incomingPortText").getHeight());
+  Textfield incomingPort = cp5.get(Textfield.class, "incomingPortText");
+  Rectangle incomingPortRect = new Rectangle((int)incomingPort.getPosition()[0], (int)incomingPort.getPosition()[1], (int)incomingPort.getWidth(), (int)incomingPort.getHeight());
   if (incomingPortRect.contains(mouseX, mouseY)) {
-    cp5.get(Textfield.class, "incomingPortText").show();
-    cp5.get(Textfield.class, "incomingPortText").setText("");
-    cp5.get(Textfield.class, "incomingPortText").setFocus(true);
+    incomingPort.show();
+    incomingPort.setText("");
+    incomingPort.setFocus(true);
   }
 
-  Rectangle outgoingPortRect = new Rectangle((int)cp5.get(Textfield.class, "outgoingPortText").getPosition()[0], (int)cp5.get(Textfield.class, "outgoingPortText").getPosition()[1], (int)cp5.get(Textfield.class, "outgoingPortText").getWidth(), (int)cp5.get(Textfield.class, "outgoingPortText").getHeight());
+  Textfield outgoingPort = cp5.get(Textfield.class, "outgoingPortText");
+  Rectangle outgoingPortRect = new Rectangle((int)outgoingPort.getPosition()[0], (int)outgoingPort.getPosition()[1], (int)outgoingPort.getWidth(), (int)outgoingPort.getHeight());
   if (outgoingPortRect.contains(mouseX, mouseY)) {
-    cp5.get(Textfield.class, "outgoingPortText").show();
-    cp5.get(Textfield.class, "outgoingPortText").setText("");
-    cp5.get(Textfield.class, "outgoingPortText").setFocus(true);
+    outgoingPort.show();
+    outgoingPort.setText("");
+    outgoingPort.setFocus(true);
   }
 
-  Rectangle remoteIpRect = new Rectangle((int)cp5.get(Textfield.class, "remoteIpText").getPosition()[0], (int)cp5.get(Textfield.class, "remoteIpText").getPosition()[1], (int)cp5.get(Textfield.class, "remoteIpText").getWidth(), (int)cp5.get(Textfield.class, "remoteIpText").getHeight());
+  Textfield remoteIp = cp5.get(Textfield.class, "remoteIpText");
+  Rectangle remoteIpRect = new Rectangle((int)remoteIp.getPosition()[0], (int)remoteIp.getPosition()[1], (int)remoteIp.getWidth(), (int)remoteIp.getHeight());
   if (remoteIpRect.contains(mouseX, mouseY)) {
-    cp5.get(Textfield.class, "remoteIpText").show();
-    cp5.get(Textfield.class, "remoteIpText").setText("");
-    cp5.get(Textfield.class, "remoteIpText").setFocus(true);
+    remoteIp.show();
+    remoteIp.setText("");
+    remoteIp.setFocus(true);
   }
 }
 
