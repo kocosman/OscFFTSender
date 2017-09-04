@@ -7,7 +7,7 @@ This is a spin-off software of the sound analysis part from NOSLib (nosvisuals.c
 - ROI for the frequency spectrum
   - drag to slide
   - swipe (wheel) to shrink or enlarge
-- Configurable IP and Port settings for OSC
+- Configurable IP and Port settings for OSC (/fftFocusSmooth is the default tag)
   - through config file, or textfields become visible when you click on the ip and port number
 
 
