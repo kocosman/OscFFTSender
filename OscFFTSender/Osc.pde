@@ -40,7 +40,7 @@ public class OscInterface implements OscEventListener {
       isConnected = true;
     } 
     catch(Exception e) {
-      papplet.println(e);
+      PApplet.println(e);
       isConnected = false;
     }
   }
