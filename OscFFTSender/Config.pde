@@ -1,19 +1,20 @@
 public void loadConfigFile() {
+  JSONObject config;
   try {
-    JSONObject config = loadJSONObject("data/config.json");
-
-    JSONObject soundParams = config.getJSONObject("sound");
-    soundFocusGUI.width = soundParams.getInt("soundFocusSize");
-    soundFocusGUI.x = soundParams.getInt("soundFocusOffset");
-
-    JSONObject oscParams = config.getJSONObject("osc");
-    incomingPort = oscParams.getInt("incomingPort");
-    outgoingPort = oscParams.getInt("outgoingPort");
-    remoteIpAddress = oscParams.getString("remoteIP");
-  } 
-  catch(Exception e) {
+    config = loadJSONObject("data/config.json");
+  } catch(NullPointerException e) {
     println("Couldn't find Config file");
+    return;
   }
+
+  JSONObject soundParams = config.getJSONObject("sound");
+  soundFocusGUI.width = soundParams.getInt("soundFocusSize");
+  soundFocusGUI.x = soundParams.getInt("soundFocusOffset");
+
+  JSONObject oscParams = config.getJSONObject("osc");
+  incomingPort = oscParams.getInt("incomingPort");
+  outgoingPort = oscParams.getInt("outgoingPort");
+  remoteIpAddress = oscParams.getString("remoteIP");
 }
 
 public void saveConfigFile() {
